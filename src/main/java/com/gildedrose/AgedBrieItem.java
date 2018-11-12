@@ -10,12 +10,11 @@ class AgedBrieItem extends ItemWrapper {
     void updateQuality() {
         sellIn--;
 
-        if (quality < 50) {
-            quality++;
-        }
+        increaseQualityInBounds();
 
-        if (sellIn < 0 && quality < 50) {
-            quality++;
+        if (sellIn < 0) {
+            increaseQualityInBounds();
         }
     }
+
 }

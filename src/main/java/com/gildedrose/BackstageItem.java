@@ -8,16 +8,13 @@ class BackstageItem extends ItemWrapper {
 
     @Override
     void updateQuality() {
-        quality++;
+        increaseQualityInBounds();
 
         if (sellIn < 11) {
-            quality++;
+            increaseQualityInBounds();
         }
         if (sellIn < 6) {
-            quality++;
-        }
-        if (quality > 50) {
-            quality = 50;
+            increaseQualityInBounds();
         }
 
         sellIn--;

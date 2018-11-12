@@ -13,7 +13,7 @@ public class TexttestFixture {
 
         writeInFile("OMGHAI!");
 
-        ItemWrapper[] items = new ItemWrapper[] {
+        ItemWrapper[] items = new ItemWrapper[]{
                 new ItemWrapper("+5 Dexterity Vest", 10, 20), //
                 new AgedBrieItem("Aged Brie", 2, 0), //
                 new ItemWrapper("Elixir of the Mongoose", 5, 7), //
@@ -23,7 +23,8 @@ public class TexttestFixture {
                 new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 10, 49),
                 new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 5, 49),
                 // this conjured item does not work properly yet
-                new ItemWrapper("Conjured Mana Cake", 3, 6) };
+                new ItemWrapper("Conjured Mana Cake", 3, 6)
+        };
 
         GildedRose app = new GildedRose(items);
 
