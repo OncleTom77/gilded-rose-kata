@@ -17,8 +17,8 @@ public class TexttestFixture {
                 new ItemWrapper("+5 Dexterity Vest", 10, 20), //
                 new AgedBrieItem("Aged Brie", 2, 0), //
                 new ItemWrapper("Elixir of the Mongoose", 5, 7), //
-                new ItemWrapper("Sulfuras, Hand of Ragnaros", 0, 80), //
-                new ItemWrapper("Sulfuras, Hand of Ragnaros", -1, 80),
+                new SulfurasItem("Sulfuras, Hand of Ragnaros", 0, 80), //
+                new SulfurasItem("Sulfuras, Hand of Ragnaros", -1, 80),
                 new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 15, 20),
                 new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 10, 49),
                 new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 5, 49),

@@ -17,6 +17,10 @@ class GildedRose {
                 items[i].updateQuality();
                 continue;
             }
+            if (items[i] instanceof SulfurasItem) {
+                items[i].updateQuality();
+                continue;
+            }
 
             if (items[i].quality > 0) {
                 if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")) {
