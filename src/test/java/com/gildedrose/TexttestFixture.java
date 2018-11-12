@@ -13,17 +13,17 @@ public class TexttestFixture {
 
         writeInFile("OMGHAI!");
 
-        ItemWrapper[] items = new ItemWrapper[]{
-                new ItemWrapper("+5 Dexterity Vest", 10, 20), //
+        AbstractItemWrapper[] items = new AbstractItemWrapper[]{
+                new DefaultItem("+5 Dexterity Vest", 10, 20), //
                 new AgedBrieItem("Aged Brie", 2, 0), //
-                new ItemWrapper("Elixir of the Mongoose", 5, 7), //
+                new DefaultItem("Elixir of the Mongoose", 5, 7), //
                 new SulfurasItem("Sulfuras, Hand of Ragnaros", 0, 80), //
                 new SulfurasItem("Sulfuras, Hand of Ragnaros", -1, 80),
                 new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 15, 20),
                 new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 10, 49),
                 new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 5, 49),
                 // this conjured item does not work properly yet
-                new ItemWrapper("Conjured Mana Cake", 3, 6)
+                new DefaultItem("Conjured Mana Cake", 3, 6)
         };
 
         GildedRose app = new GildedRose(items);

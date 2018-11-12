@@ -1,14 +1,14 @@
 package com.gildedrose;
 
 class GildedRose {
-    ItemWrapper[] items;
+    AbstractItemWrapper[] items;
 
-    GildedRose(ItemWrapper[] items) {
+    GildedRose(AbstractItemWrapper[] items) {
         this.items = items;
     }
 
     public void updateQuality() {
-        for (ItemWrapper item : items) {
+        for (AbstractItemWrapper item : items) {
             item.updateQuality();
         }
     }

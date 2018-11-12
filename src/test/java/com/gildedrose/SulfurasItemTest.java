@@ -8,7 +8,7 @@ public class SulfurasItemTest {
 
     @Test
     public void should_keep_sellIn_and_quality_when_update_quality() {
-        ItemWrapper sulfuras = new SulfurasItem("Sulfuras, Hand of Ragnaros", 0, 80);
+        AbstractItemWrapper sulfuras = new SulfurasItem("Sulfuras, Hand of Ragnaros", 0, 80);
 
         sulfuras.updateQuality();
 

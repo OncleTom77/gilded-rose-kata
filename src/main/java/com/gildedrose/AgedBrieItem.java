@@ -1,6 +1,6 @@
 package com.gildedrose;
 
-class AgedBrieItem extends ItemWrapper {
+class AgedBrieItem extends ImprovingItem {
 
     AgedBrieItem(String name, int sellIn, int quality) {
         super(name, sellIn, quality);
