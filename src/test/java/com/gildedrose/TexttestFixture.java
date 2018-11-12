@@ -20,13 +20,13 @@ public class TexttestFixture {
 
         AbstractItemWrapper[] items = new AbstractItemWrapper[]{
                 DefaultItem.of("+5 Dexterity Vest", 10, 20), //
-                AgedBrieItem.of("Aged Brie", 2, 0), //
+                AgedBrieItem.of(2, 0), //
                 DefaultItem.of("Elixir of the Mongoose", 5, 7), //
-                SulfurasItem.of("Sulfuras, Hand of Ragnaros", 0, 80), //
-                SulfurasItem.of("Sulfuras, Hand of Ragnaros", -1, 80),
-                BackstageItem.of("Backstage passes to a TAFKAL80ETC concert", 15, 20),
-                BackstageItem.of("Backstage passes to a TAFKAL80ETC concert", 10, 49),
-                BackstageItem.of("Backstage passes to a TAFKAL80ETC concert", 5, 49),
+                SulfurasItem.of(0, 80), //
+                SulfurasItem.of(-1, 80),
+                BackstageItem.of(15, 20),
+                BackstageItem.of(10, 49),
+                BackstageItem.of(5, 49),
                 // this conjured item does not work properly yet
                 DefaultItem.of("Conjured Mana Cake", 3, 6)
         };

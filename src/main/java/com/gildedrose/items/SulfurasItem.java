@@ -6,8 +6,8 @@ public class SulfurasItem extends AbstractItemWrapper {
         super(name, sellIn, quality);
     }
 
-    public static SulfurasItem of(String name, int sellIn, int quality) {
-        return new SulfurasItem(name, sellIn, quality);
+    public static SulfurasItem of(int sellIn, int quality) {
+        return new SulfurasItem("Sulfuras, Hand of Ragnaros", sellIn, quality);
     }
 
     @Override

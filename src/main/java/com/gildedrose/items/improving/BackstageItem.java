@@ -6,8 +6,8 @@ public class BackstageItem extends ImprovingItem {
         super(name, sellIn, quality);
     }
 
-    public static BackstageItem of(String name, int sellIn, int quality) {
-        return new BackstageItem(name, sellIn, quality);
+    public static BackstageItem of(int sellIn, int quality) {
+        return new BackstageItem("Backstage passes to a TAFKAL80ETC concert", sellIn, quality);
     }
 
     @Override

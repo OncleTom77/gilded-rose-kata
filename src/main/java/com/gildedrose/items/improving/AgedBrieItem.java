@@ -6,8 +6,8 @@ public class AgedBrieItem extends ImprovingItem {
         super(name, sellIn, quality);
     }
 
-    public static AgedBrieItem of(String name, int sellIn, int quality) {
-        return new AgedBrieItem(name, sellIn, quality);
+    public static AgedBrieItem of(int sellIn, int quality) {
+        return new AgedBrieItem("Aged Brie", sellIn, quality);
     }
 
     @Override
