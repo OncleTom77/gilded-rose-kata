@@ -1,8 +1,17 @@
 package com.gildedrose;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class TexttestFixture {
-    public static void main(String[] args) {
-        System.out.println("OMGHAI!");
+
+    private static FileWriter goldenMasterWriter;
+
+    public static void main(String[] args) throws IOException {
+        initGoldenMasterFile();
+
+        writeInFile("OMGHAI!");
 
         Item[] items = new Item[] {
                 new Item("+5 Dexterity Vest", 10, 20), //
@@ -18,20 +27,47 @@ public class TexttestFixture {
 
         GildedRose app = new GildedRose(items);
 
-        int days = 2;
+        int days = 7;
         if (args.length > 0) {
             days = Integer.parseInt(args[0]) + 1;
         }
 
         for (int i = 0; i < days; i++) {
-            System.out.println("-------- day " + i + " --------");
-            System.out.println("name, sellIn, quality");
+            writeInFile("-------- day " + i + " --------");
+            writeInFile("name, sellIn, quality");
             for (Item item : items) {
-                System.out.println(item);
+                writeInFile(item.toString());
             }
-            System.out.println();
+            writeInFile();
             app.updateQuality();
         }
+
+        goldenMasterWriter.close();
+    }
+
+    private static void writeInFile() throws IOException {
+        writeInFile(null);
+    }
+
+    private static void writeInFile(String object) throws IOException {
+        if (null != object) {
+            System.out.println(object);
+            goldenMasterWriter.append(object);
+        }
+        goldenMasterWriter.append("\n");
+    }
+
+    private static void initGoldenMasterFile() throws IOException {
+        File goldenMaster = new File("./goldenMaster.txt");
+
+        if (!goldenMaster.exists()) {
+            if (!goldenMaster.createNewFile()) {
+                throw new IllegalStateException();
+            }
+        }
+
+        goldenMasterWriter = new FileWriter(goldenMaster, false);
+
     }
 
 }
