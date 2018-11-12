@@ -1,14 +1,16 @@
-package com.gildedrose;
+package com.gildedrose.items;
+
+import com.gildedrose.Item;
 
 import java.util.Objects;
 
 public abstract class AbstractItemWrapper extends Item {
 
-    AbstractItemWrapper(String name, int sellIn, int quality) {
+    protected AbstractItemWrapper(String name, int sellIn, int quality) {
         super(name, sellIn, quality);
     }
 
-    abstract void updateQuality();
+    public abstract void updateQuality();
 
     @Override
     public boolean equals(Object o) {

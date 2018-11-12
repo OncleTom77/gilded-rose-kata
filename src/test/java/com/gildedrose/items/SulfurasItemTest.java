@@ -1,5 +1,7 @@
-package com.gildedrose;
+package com.gildedrose.items;
 
+import com.gildedrose.items.AbstractItemWrapper;
+import com.gildedrose.items.SulfurasItem;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

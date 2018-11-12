@@ -1,4 +1,6 @@
-package com.gildedrose;
+package com.gildedrose.items.improving;
+
+import com.gildedrose.items.AbstractItemWrapper;
 
 abstract class ImprovingItem extends AbstractItemWrapper {
     private static final int MAXIMUM_QUALITY = 50;

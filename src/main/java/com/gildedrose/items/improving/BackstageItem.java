@@ -1,13 +1,17 @@
-package com.gildedrose;
+package com.gildedrose.items.improving;
 
-class BackstageItem extends ImprovingItem {
+public class BackstageItem extends ImprovingItem {
 
-    BackstageItem(String name, int sellIn, int quality) {
+    private BackstageItem(String name, int sellIn, int quality) {
         super(name, sellIn, quality);
     }
 
+    public static BackstageItem of(String name, int sellIn, int quality) {
+        return new BackstageItem(name, sellIn, quality);
+    }
+
     @Override
-    void updateQuality() {
+    public void updateQuality() {
         increaseQualityInBounds();
 
         if (sellIn < 11) {

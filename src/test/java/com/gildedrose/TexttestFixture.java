@@ -1,5 +1,10 @@
 package com.gildedrose;
 
+import com.gildedrose.items.*;
+import com.gildedrose.items.degradable.DefaultItem;
+import com.gildedrose.items.improving.AgedBrieItem;
+import com.gildedrose.items.improving.BackstageItem;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -14,16 +19,16 @@ public class TexttestFixture {
         writeInFile("OMGHAI!");
 
         AbstractItemWrapper[] items = new AbstractItemWrapper[]{
-                new DefaultItem("+5 Dexterity Vest", 10, 20), //
-                new AgedBrieItem("Aged Brie", 2, 0), //
-                new DefaultItem("Elixir of the Mongoose", 5, 7), //
-                new SulfurasItem("Sulfuras, Hand of Ragnaros", 0, 80), //
-                new SulfurasItem("Sulfuras, Hand of Ragnaros", -1, 80),
-                new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 15, 20),
-                new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 10, 49),
-                new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 5, 49),
+                DefaultItem.of("+5 Dexterity Vest", 10, 20), //
+                AgedBrieItem.of("Aged Brie", 2, 0), //
+                DefaultItem.of("Elixir of the Mongoose", 5, 7), //
+                SulfurasItem.of("Sulfuras, Hand of Ragnaros", 0, 80), //
+                SulfurasItem.of("Sulfuras, Hand of Ragnaros", -1, 80),
+                BackstageItem.of("Backstage passes to a TAFKAL80ETC concert", 15, 20),
+                BackstageItem.of("Backstage passes to a TAFKAL80ETC concert", 10, 49),
+                BackstageItem.of("Backstage passes to a TAFKAL80ETC concert", 5, 49),
                 // this conjured item does not work properly yet
-                new DefaultItem("Conjured Mana Cake", 3, 6)
+                DefaultItem.of("Conjured Mana Cake", 3, 6)
         };
 
         GildedRose app = new GildedRose(items);

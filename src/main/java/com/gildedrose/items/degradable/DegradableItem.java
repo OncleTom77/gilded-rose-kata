@@ -1,4 +1,6 @@
-package com.gildedrose;
+package com.gildedrose.items.degradable;
+
+import com.gildedrose.items.AbstractItemWrapper;
 
 abstract class DegradableItem extends AbstractItemWrapper {
     private static final int MINIMUM_QUALITY = 0;
