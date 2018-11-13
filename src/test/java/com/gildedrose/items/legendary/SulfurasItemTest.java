@@ -9,10 +9,10 @@ public class SulfurasItemTest {
 
     @Test
     public void should_keep_sellIn_and_quality_when_update_quality() {
-        AbstractItemWrapper sulfuras = new SulfurasItem("Sulfuras, Hand of Ragnaros", 0, 80);
+        AbstractItemWrapper sulfuras = SulfurasItem.of(0);
 
         sulfuras.updateQuality();
 
-        assertThat(sulfuras).isEqualTo(new SulfurasItem("Sulfuras, Hand of Ragnaros", 0, 80));
+        assertThat(sulfuras).isEqualTo(SulfurasItem.of(0));
     }
 }

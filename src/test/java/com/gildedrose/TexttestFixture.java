@@ -24,8 +24,8 @@ public class TexttestFixture {
                 DefaultItem.of("+5 Dexterity Vest", 10, 20), //
                 AgedBrieItem.of(2, 0), //
                 DefaultItem.of("Elixir of the Mongoose", 5, 7), //
-                SulfurasItem.of(0, 80), //
-                SulfurasItem.of(-1, 80),
+                SulfurasItem.of(0), //
+                SulfurasItem.of(-1),
                 BackstageItem.of(15, 20),
                 BackstageItem.of(10, 49),
                 BackstageItem.of(5, 49),
