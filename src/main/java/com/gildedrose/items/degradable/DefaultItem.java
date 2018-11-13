@@ -12,12 +12,12 @@ public class DefaultItem extends DegradableItem {
 
     @Override
     public void updateQuality() {
-        decreaseQualityInBounds();
+        decreaseQualityInBounds(1);
 
         sellIn--;
 
         if (sellIn < 0) {
-            decreaseQualityInBounds();
+            decreaseQualityInBounds(1);
         }
     }
 }

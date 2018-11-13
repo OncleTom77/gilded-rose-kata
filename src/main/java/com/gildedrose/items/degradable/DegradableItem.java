@@ -9,9 +9,11 @@ abstract class DegradableItem extends AbstractItemWrapper {
         super(name, sellIn, quality);
     }
 
-    void decreaseQualityInBounds() {
-        if (quality > MINIMUM_QUALITY) {
-            quality--;
+    void decreaseQualityInBounds(int number) {
+        for (int i = 0; i < number; i++) {
+            if (quality > MINIMUM_QUALITY) {
+                quality--;
+            }
         }
     }
 }

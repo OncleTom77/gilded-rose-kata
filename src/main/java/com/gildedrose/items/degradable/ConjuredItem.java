@@ -14,14 +14,12 @@ public class ConjuredItem extends DegradableItem {
 
     @Override
     public void updateQuality() {
-        decreaseQualityInBounds();
-        decreaseQualityInBounds();
+        decreaseQualityInBounds(2);
 
         sellIn--;
 
         if (sellIn < 0) {
-            decreaseQualityInBounds();
-            decreaseQualityInBounds();
+            decreaseQualityInBounds(2);
         }
     }
 }
