@@ -1,6 +1,7 @@
 package com.gildedrose;
 
 import com.gildedrose.items.*;
+import com.gildedrose.items.degradable.ConjuredItem;
 import com.gildedrose.items.degradable.DefaultItem;
 import com.gildedrose.items.improving.AgedBrieItem;
 import com.gildedrose.items.improving.BackstageItem;
@@ -28,7 +29,7 @@ public class TexttestFixture {
                 BackstageItem.of(10, 49),
                 BackstageItem.of(5, 49),
                 // this conjured item does not work properly yet
-                DefaultItem.of("Conjured Mana Cake", 3, 6)
+                ConjuredItem.of("Conjured Mana Cake", 3, 6)
         };
 
         GildedRose app = new GildedRose(items);
@@ -57,19 +58,19 @@ public class TexttestFixture {
 
     private static void writeInFile(String object) throws IOException {
         if (null != object) {
-            System.out.println(object);
+            System.out.print(object);
             goldenMasterWriter.append(object);
         }
         goldenMasterWriter.append("\n");
+        System.out.println();
     }
 
     private static void initGoldenMasterFile() throws IOException {
         File goldenMaster = new File("./goldenMaster.txt");
 
-        if (!goldenMaster.exists()) {
-            if (!goldenMaster.createNewFile()) {
-                throw new IllegalStateException();
-            }
+        if (!goldenMaster.exists()
+                && !goldenMaster.createNewFile()) {
+            throw new IllegalStateException();
         }
 
         goldenMasterWriter = new FileWriter(goldenMaster, false);
