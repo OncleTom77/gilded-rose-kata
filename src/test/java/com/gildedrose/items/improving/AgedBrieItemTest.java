@@ -1,5 +1,6 @@
-package com.gildedrose.items;
+package com.gildedrose.items.improving;
 
+import com.gildedrose.items.AbstractItemWrapper;
 import com.gildedrose.items.improving.AgedBrieItem;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;

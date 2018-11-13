@@ -5,6 +5,7 @@ import com.gildedrose.items.degradable.ConjuredItem;
 import com.gildedrose.items.degradable.DefaultItem;
 import com.gildedrose.items.improving.AgedBrieItem;
 import com.gildedrose.items.improving.BackstageItem;
+import com.gildedrose.items.legendary.SulfurasItem;
 
 import java.io.File;
 import java.io.FileWriter;

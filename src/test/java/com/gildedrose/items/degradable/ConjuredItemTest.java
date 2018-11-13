@@ -1,6 +1,6 @@
-package com.gildedrose.items;
+package com.gildedrose.items.degradable;
 
-import com.gildedrose.items.degradable.ConjuredItem;
+import com.gildedrose.items.AbstractItemWrapper;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

@@ -1,4 +1,6 @@
-package com.gildedrose.items;
+package com.gildedrose.items.legendary;
+
+import com.gildedrose.items.AbstractItemWrapper;
 
 public class SulfurasItem extends AbstractItemWrapper {
 
