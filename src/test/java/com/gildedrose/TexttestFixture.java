@@ -40,15 +40,16 @@ public class TexttestFixture {
         }
 
         for (int i = 0; i < days; i++) {
-            printItemsState(items, i);
+            writeInFile("-------- day " + i + " --------");
+            printItems(items);
+
             app.updateQuality();
         }
 
         goldenMasterWriter.close();
     }
 
-    private static void printItemsState(AbstractItemWrapper[] items, int day) throws IOException {
-        writeInFile("-------- day " + day + " --------");
+    private static void printItems(AbstractItemWrapper[] items) throws IOException {
         writeInFile("name, sellIn, quality");
         for (Item item : items) {
             writeInFile(item.toString());
